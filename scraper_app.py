@@ -69,6 +69,8 @@ def nodes_to_dataframe(nodes):
             "Name": tags.get("name", ""),
             "Type": tags.get("shop") or tags.get("amenity", ""),
             "Website": tags.get("website", ""),
+            "Phone": tags.get("phone") or tags.get("contact:phone", ""),
+
             "Latitude": n.get("lat"),
             "Longitude": n.get("lon"),
         })
